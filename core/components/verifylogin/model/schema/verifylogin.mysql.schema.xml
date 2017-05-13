@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="verifylogin" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="verifylogin" version="1.0">
+
+    <object class="verifyLoginRecord" table="user_verify_login" extends="xPDOSimpleObject">
+        <field key="user_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" index="index" />
+        <field key="ip_address" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" index="index" />
+        <field key="user_agent" dbtype="varchar" precision="255" phptype="string" null="false" default="" index="index" />
+
+        <aggregate alias="User" class="modUser" local="user_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+</model>

@@ -1,0 +1,48 @@
+{
+  "name": "VerifyLogin",
+  "lowCaseName": "verifylogin",
+  "description": "Verify login package.",
+  "author": "Johan van der Molen",
+  "version": "1.0.0",
+  "package":{
+    "menus": [],
+    "elements": {
+      "categories": [],
+      "snippets": [],
+      "chunks": [{
+        "name": "verifyLogin",
+        "file": "verifylogin.chunk.tpl"
+      }],
+      "plugins": [{
+        "name": "verifyLogin",
+        "description": "",
+        "file": "verifylogin.plugin.php",
+        "events": [
+          "OnManagerLogin"
+        ]
+      }]
+    },
+    "systemSettings": [{
+      "key": "user_name",
+      "type": "textfield",
+      "area": "default",
+      "value": ""
+    }, {
+      "key": "user_email",
+      "type": "textfield",
+      "area": "default",
+      "value": ""
+    }]
+  },
+  "database": {
+    "tables": ["verifyLoginRecord"]
+  },
+  "build":{
+    "resolver": {
+      "after": ["setupoptions.resolver.php", "stercextra.resolver.php"]
+    },
+    "setupOptions":{
+      "source": "setup.options.php"
+    }
+  }
+}
