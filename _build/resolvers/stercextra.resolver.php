@@ -2,7 +2,7 @@
 /**
  * VerifyLogin StercExtra resolver
  *
- * @package VerifyLogin
+ * @package verifylogin
  * @subpackage build
  */
 $package = 'VerifyLogin';
