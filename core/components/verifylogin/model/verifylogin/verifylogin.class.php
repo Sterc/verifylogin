@@ -112,11 +112,24 @@ class VerifyLogin
                     $object->fromArray($record);
                     $object->save();
 
+                    $userSettings = $user->getSettings();
+
                     $profile = $user->getOne('Profile');
                     if ($profile && !empty($profile->get('email'))) {
-                        $language = $this->modx->getOption('manager_language');
-                        $this->modx->lexicon->load($language . ':verifylogin:default');
+                        $dateFormat = $this->getOption(
+                            'email_date_format',
+                            array(),
+                            $this->modx->getOption('manager_date_format') . ' H:i:s'
+                        );
+                        $closure = $this->getOption('email_closure', array(), $this->modx->getOption('site_name'));
+                        $additionalContent = $this->getOption('email_additional_content');
+                        $emailChunk = $this->getOption('email_chunk', array(), 'verifyLogin');
+
+                        $language = isset($userSettings['manager_language']) ? $userSettings['manager_language'] :
+                            $this->modx->getOption('manager_language');
                         $userAgent = unserialize($record['user_agent']);
+
+                        $this->modx->lexicon->load($language . ':verifylogin:default');
 
                         $parameters = array(
                             'topic'       => 'default',
@@ -124,18 +137,22 @@ class VerifyLogin
                             'username'    => $user->get('username'),
                             'fullname'    => $profile->get('fullname'),
                             'email'       => $profile->get('email'),
-                            'date'        => date($this->modx->getOption('manager_date_format') . ' H:i:s'),
+                            'date'        => date($dateFormat),
                             'ip_address'  => long2ip($record['ip_address']),
                             'browser'     => $userAgent['browser'],
                             'os'          => $userAgent['os'],
                             'device_type' => $userAgent['device_type'],
                             'language'    => $language,
                             'site_name'   => $this->modx->getOption('site_name'),
-                            'manager_url' => rtrim(MODX_SITE_URL, '/') . MODX_MANAGER_URL,
+                            'closure'     => $closure,
+                            'additional'  => $additionalContent,
+                            'assets_url'  => $this->getOption('assetsUrl'),
+                            'site_url'    => rtrim(MODX_SITE_URL, '/'),
+                            'manager_url' => rtrim(MODX_SITE_URL, '/') . MODX_MANAGER_URL . '?a=security/profile',
                         );
 
                         $subject = $this->modx->lexicon('verifylogin.mail.subject', $parameters, $language);
-                        $mailHtml = $this->modx->getChunk('verifyLogin', $parameters);
+                        $mailHtml = $this->modx->getChunk($emailChunk, $parameters);
 
                         $this->modx->getService('mail', 'mail.modPHPMailer');
                         $this->modx->mail->set(modMail::MAIL_BODY, $mailHtml);

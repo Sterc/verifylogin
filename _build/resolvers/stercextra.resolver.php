@@ -1,8 +1,8 @@
 <?php
 /**
- * ClientLexicon StercExtra resolver
+ * VerifyLogin StercExtra resolver
  *
- * @package clientlexicon
+ * @package VerifyLogin
  * @subpackage build
  */
 $package = 'VerifyLogin';

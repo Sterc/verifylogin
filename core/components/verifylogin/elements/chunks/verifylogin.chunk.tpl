@@ -113,44 +113,49 @@
         /* end Android targeting */
 
     </style>
-
-    <!-- Targeting Windows Mobile -->
-    <!--[if IEMobile 7]>
-    <style type="text/css">
-
-    </style>
-    <![endif]-->
-
-    <!-- ***********************************************
-    ****************************************************
-    END MOBILE TARGETING
-    ****************************************************
-    ************************************************ -->
-
-    <!--[if gte mso 9]>
-    <style>
-        /* Target Outlook 2007 and 2010 */
-    </style>
-    <![endif]-->
 </head>
-<body>
-<!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
-<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
-    <tr>
-        <td valign="top" style="font-family:'Lucida Grande',Helvetica,Arial,sans-serif;line-height:18px;padding:40px;text-align:left;font-size:14px;color:rgb(51,51,51);">
-            <table style="width:100%;"><tr><td style="border-top:2px solid #ccc;padding-bottom:20px;"></td></tr></table>
-            [[%verifylogin.mail.content?
-            &topic=`default`
-            &namespace=`verifylogin`
-            &language=`[[+language]]`
-            &fullname=`[[+fullname]]`
-            &email=`[[+email]]`
-            &user_agent.browser=`[[+user_agent.browser]]`
-            &date=`[[+date]]`
-            ]]
-        </td>
-    </tr>
-</table>
-<!-- End of wrapper table -->
+<body style="background-color: #ffffff;">
+    <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" bgcolor="#ffffff" style="background-color: #ffffff;">
+        <tr>
+            <td valign="top" style="font-family:Arial,sans-serif;line-height:23px;padding:40px 40px 15px 40px;text-align:left;font-size:15px;color:#303030;">
+                <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" bgcolor="#00FF00" style="background-color:#f0f0f0;">
+                    <tr>
+                        <td valign="top" align="center" style="text-align:center;background-color:#f0f0f0;padding-top:17px;">
+                            <img alt="Top logo" style="text-align:center" src="[[+site_url]][[+assets_url]]img/top-logo.png" border="0" height="65" width="52">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" style="font-family:Arial,sans-serif;line-height:23px;padding:15px 37px 35px 37px;text-align:left;font-size:15px;color:#303030;border-bottom: 5px solid #c4c4c4;background-color:#f0f0f0;">
+                            [[%verifylogin.mail.content?
+                            &topic=`default`
+                            &namespace=`verifylogin`
+                            &language=`[[+language]]`
+                            &fullname=`[[+fullname]]`
+                            &email=`[[+email]]`
+                            &user_agent.browser=`[[+user_agent.browser]]`
+                            &date=`[[+date]]`
+                            ]]
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" width="100%" style="margin-bottom:40px;">
+                    <tr>
+                        <td valign="top" align="left" style="text-align:left;padding-left:40px;">
+                            <a href="https://www.sterc.nl" target="_blank">
+                                <img alt="Sterc logo" style="text-align:left" src="[[+site_url]][[+assets_url]]img/sterc-logo.png" border="0" height="68" width="107">
+                            </a>
+                        </td>
+                        <td valign="top" align="right" style="text-align:right;padding-right:40px;">
+                            <img alt="MODX logo" style="text-align:right" src="[[+site_url]][[+assets_url]]img/modx-logo.png" border="0" height="31" width="99">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

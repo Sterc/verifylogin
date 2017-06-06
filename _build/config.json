@@ -32,6 +32,31 @@
       "type": "textfield",
       "area": "default",
       "value": ""
+    }, {
+      "key": "email_closure",
+      "type": "textfield",
+      "area": "default",
+      "value": "Sterc Internet & Marketing"
+    }, {
+      "key": "email_date_format",
+      "type": "textfield",
+      "area": "default",
+      "value": "l d F Y H:i (e)"
+    }, {
+      "key": "email_powered_by",
+      "type": "combo-boolean",
+      "area": "default",
+      "value": "1"
+    }, {
+      "key": "email_additional_content",
+      "type": "textfield",
+      "area": "default",
+      "value": "Heb je vragen over de bovenstaande melding? Neem dan contact met ons op via 0512361114 of mail ons op service@sterc.nl."
+    }, {
+      "key": "email_chunk",
+      "type": "textfield",
+      "area": "default",
+      "value": "verifyLogin"
     }]
   },
   "database": {
