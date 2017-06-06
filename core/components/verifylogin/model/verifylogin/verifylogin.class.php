@@ -122,14 +122,20 @@ class VerifyLogin
                             $this->modx->getOption('manager_date_format') . ' H:i:s'
                         );
                         $closure = $this->getOption('email_closure', array(), $this->modx->getOption('site_name'));
-                        $additionalContent = $this->getOption('email_additional_content');
                         $emailChunk = $this->getOption('email_chunk', array(), 'verifyLogin');
-
                         $language = isset($userSettings['manager_language']) ? $userSettings['manager_language'] :
                             $this->modx->getOption('manager_language');
                         $userAgent = unserialize($record['user_agent']);
-
                         $this->modx->lexicon->load($language . ':verifylogin:default');
+
+                        /**
+                         * Set additional content.
+                         */
+                        $additionalContentJson = json_decode($this->getOption('email_additional_content'), true);
+                        $additionalContent = '';
+                        if (is_array($additionalContentJson) && isset($additionalContentJson[$language])) {
+                            $additionalContent = $additionalContentJson[$language];
+                        }
 
                         $parameters = array(
                             'topic'       => 'default',

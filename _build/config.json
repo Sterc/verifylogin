@@ -51,7 +51,7 @@
       "key": "email_additional_content",
       "type": "textfield",
       "area": "default",
-      "value": "Heb je vragen over de bovenstaande melding? Neem dan contact met ons op via 0512361114 of mail ons op service@sterc.nl."
+      "value": "{\"nl\": \"Heb je vragen over de bovenstaande melding? Neem dan contact met ons op via 0512361114 of mail ons op service@sterc.nl.\",\"en\": \"Do you have questions about this e-mail? Please contact us at 0512361114 or e-mail us on service@sterc.nl.\"}"
     }, {
       "key": "email_chunk",
       "type": "textfield",
