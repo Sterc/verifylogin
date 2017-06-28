@@ -16,9 +16,9 @@ $_lang['setting_verifylogin.email_chunk'] = 'E-mail chunk';
 $_lang['setting_verifylogin.user_email'] = 'User e-mail';
 $_lang['setting_verifylogin.user_name'] = 'User name';
 
-$_lang['verifylogin.mail.subject'] = 'Nieuwe login via [[+browser]] op [[+os]]';
+$_lang['verifylogin.mail.subject'] = 'Nieuwe MODX login [[+site_url]] via [[+browser]] op [[+os]]';
 $_lang['verifylogin.mail.content'] = '<p>Beste [[+fullname]],</p>
-<p>Je account ([[+email]]) is gebruikt om in te loggen bij de [[+site_name]] manager.</p>
+<p>Je account ([[+email]]) is gebruikt om in te loggen bij de MODX manager van [[+site_url]].</p>
 <p><strong>Datum en tijd</strong><br /> [[+date]]</p>
 <p><strong>IP adres</strong><br /> [[+ip_address]]</p>
 <p><strong>Browser</strong><br /> [[+browser]]</p>
