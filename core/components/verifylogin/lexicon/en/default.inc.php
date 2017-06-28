@@ -22,10 +22,10 @@ $_lang['verifylogin.mail.content'] = '<p>Dear [[+fullname]],</p>
 <p><strong>Date and time</strong><br /> [[+date]]</p>
 <p><strong>IP address</strong><br /> [[+ip_address]]</p>
 <p><strong>Browser</strong><br /> [[+browser]]</p>
-<p>If the information above is known to you, you can ignore this email.</p>
-<p>If you have not recently logged in to the [[+site_name]] manager and you think someone has attempted access to your account, you will need to reset your password</p>
+<p><strong>If this was you</strong><br /> Nothing to worry about. There\'s nothing else you need to do.</p>
+<p><strong>If this wasn\'t you</strong><br /> Your account may have been compromised and you should reset your password now.</p>
 <p>
-    <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" bgcolor="#de005a" style="background-color:#de005a;max-width: 200px;text-align:center;">
+    <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" bgcolor="#de005a" style="background-color:#de005a;max-width:200px;text-align:center;">
         <tr>
             <td>
                 <a href="[[+manager_url]]" target="_blank" style="padding:15px 35px;color:#ffffff;font-weight:bold;background-color:#de005a;font-size:15px;display:inline-block;text-decoration:none;">Change password</a>

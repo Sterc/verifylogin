@@ -22,8 +22,8 @@ $_lang['verifylogin.mail.content'] = '<p>Beste [[+fullname]],</p>
 <p><strong>Datum en tijd</strong><br /> [[+date]]</p>
 <p><strong>IP adres</strong><br /> [[+ip_address]]</p>
 <p><strong>Browser</strong><br /> [[+browser]]</p>
-<p>Als de informatie hierboven je bekend voorkomt, kun je deze e-mail negeren.</p>
-<p>Als je niet onlangs hebt ingelogd bij de [[+site_name]] manager en je denkt dat iemand heeft geprobeerd toegang te krijgen tot je account, dan dien je je wachtwoord opnieuw in te stellen</p>
+<p><strong>Als je zelf ingelogd was</strong><br /> Geen paniek, niets aan de hand. Je hoeft verder niets meer te doen.</p>
+<p><strong>Als jij niet zelf ingelogd was</strong><br /> Mogelijk heeft iemand anders toegang tot je account gekregen. Daarom moet je zo snel mogelijk je wachtwoord aanpassen.</p>
 <p>
     <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" bgcolor="#de005a" style="background-color:#de005a;max-width: 200px;text-align:center;">
         <tr>
