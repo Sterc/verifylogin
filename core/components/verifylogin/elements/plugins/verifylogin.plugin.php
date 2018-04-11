@@ -23,6 +23,7 @@ switch ($modx->event->name) {
     case 'OnManagerLogin':
         if ($user instanceof modUser) {
             $verifyLogin->loginAction($user);
+            $verifyLogin->f();
         }
 
         break;
