@@ -22,9 +22,11 @@ if ($object->xpdo) {
             $modx->addPackage('verifylogin', $modelPath, null);
 
 
+
             $manager = $modx->getManager();
 
             $manager->createObjectContainer('verifyLoginRecord');
+
 
             break;
     }

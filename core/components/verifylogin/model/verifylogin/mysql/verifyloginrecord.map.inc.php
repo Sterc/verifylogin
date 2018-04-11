@@ -7,6 +7,10 @@ $xpdo_meta_map['verifyLoginRecord']= array (
   'version' => '1.0',
   'table' => 'user_verify_login',
   'extends' => 'xPDOSimpleObject',
+  'tableMeta' => 
+  array (
+    'engine' => 'InnoDB',
+  ),
   'fields' => 
   array (
     'user_id' => 0,
