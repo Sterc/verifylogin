@@ -1,5 +1,9 @@
 Changelog for VerifyLogin.
 
+VerifyLogin 1.0.2
+==============
+- Added German translations
+
 VerifyLogin 1.0.1
 ==============
 - Added modmore/modstore support
