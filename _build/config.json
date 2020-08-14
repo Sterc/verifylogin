@@ -3,7 +3,7 @@
   "lowCaseName": "verifylogin",
   "description": "Verify login package.",
   "author": "Johan van der Molen",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "package":{
     "menus": [],
     "elements": {

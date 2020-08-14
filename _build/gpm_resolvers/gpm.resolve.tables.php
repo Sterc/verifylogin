@@ -18,10 +18,12 @@ if ($object->xpdo) {
         case xPDOTransport::ACTION_INSTALL:
         case xPDOTransport::ACTION_UPGRADE:
             $modelPath = $modx->getOption('verifylogin.core_path', null, $modx->getOption('core_path') . 'components/verifylogin/') . 'model/';
-
+            
             $modx->addPackage('verifylogin', $modelPath, null);
 
+
             $manager = $modx->getManager();
+
             $manager->createObjectContainer('verifyLoginRecord');
 
             break;
