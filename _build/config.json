@@ -57,6 +57,11 @@
       "type": "textfield",
       "area": "default",
       "value": "verifyLogin"
+    }, {
+      "key": "email_ignore_list",
+      "type": "textfield",
+      "area": "default",
+      "value": "info@info.com"
     }]
   },
   "database": {
