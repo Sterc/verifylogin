@@ -175,7 +175,7 @@ class VerifyLogin
                         $this->sendEmailNotification(
                             $this->modx->lexicon('verifylogin.mail.subject', $parameters, $this->language),
                             $this->modx->getChunk($this->getOption('email_chunk', [], 'verifyLogin'), $parameters),
-                            $this->profile->get('email')
+                            $this->userProfile->get('email')
                         );
                     }
                 }
