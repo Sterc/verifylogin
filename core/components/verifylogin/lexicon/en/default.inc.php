@@ -1,11 +1,7 @@
 <?php
 /**
- * Default English Lexicon Entries for VerifyLogin
- *
- * @package verifylogin
- * @subpackage lexicon
+ * Default English Lexicon Entries for VerifyLogin.
  */
-
 $_lang['verifylogin'] = 'VerifyLogin';
 
 $_lang['setting_verifylogin.email_closure'] = 'E-mail closure';
@@ -15,6 +11,7 @@ $_lang['setting_verifylogin.email_additional_content'] = 'E-mail additional cont
 $_lang['setting_verifylogin.email_chunk'] = 'E-mail chunk';
 $_lang['setting_verifylogin.user_email'] = 'User e-mail';
 $_lang['setting_verifylogin.user_name'] = 'User name';
+$_lang['setting_verifylogin.email_ignore_list'] = 'List of email addresses to ignore';
 
 $_lang['verifylogin.mail.subject'] = 'New MODX login [[+site_url]] via [[+browser]] on [[+os]]';
 $_lang['verifylogin.mail.content'] = '<p>Dear [[+fullname]],</p>
