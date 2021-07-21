@@ -3,7 +3,7 @@
   "lowCaseName": "verifylogin",
   "description": "Verify login package.",
   "author": "Johan van der Molen",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "package":{
     "menus": [],
     "elements": {
@@ -57,6 +57,11 @@
       "type": "textfield",
       "area": "default",
       "value": "verifyLogin"
+    }, {
+      "key": "email_ignore_list",
+      "type": "textfield",
+      "area": "default",
+      "value": ""
     }]
   },
   "database": {
