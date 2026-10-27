@@ -23,6 +23,11 @@ class VerifyLogin
     public $namespace;
 
     /**
+     * Holds the options.
+     */
+    public $options = [];
+
+    /**
      * Holds browser info.
      */
     private $browserInfo;
